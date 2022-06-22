@@ -3,31 +3,25 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	mode: 'development',
 	entry: './main.jsx',
-	devtool: 'inline-source-map',
-	output: {
-		path: path.join(__dirname, '/dist'),
-		filename: 'bundle.js'
-	},
-	devServer: {
-		static: './dist',
-	},
+	mode: 'development',
 	module: {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
+				loader: 'babel-loader',
+				exclude: /node_modules/
 			}
 		]
+	},
+	devServer: {
+		static: './dist',
 	},
 	resolve: {
 		extensions: ['.jsx', '.ts', '.js'],
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './index.html'
-		})
-	]
+	output: {
+		path: path.join(__dirname, '/dist'),
+		filename: 'bundle.js'
+	},
 }
