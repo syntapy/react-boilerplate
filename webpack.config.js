@@ -1,32 +1,32 @@
 const path = require('path')
-
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	entry: './main.jsx',
+	entry: './src/main.jsx',
 	mode: 'development',
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
-				loader: 'babel-loader',
+				test: /\.(js|jsx)$/,
+				use: ['babel-loader'],
 				exclude: /node_modules/
 			}
 		]
 	},
-	devServer: {
-		static: './dist',
-	},
 	resolve: {
-		extensions: ['.jsx', '.ts', '.js'],
+		extensions: ['.jsx', '.js'],
 	},
 	devServer: {
 		port: 3000,
+		hot: true,
 		open: true,
-		hot: true
+		static: path.join(__dirname, './build')
 	},
 	output: {
-		path: path.join(__dirname, '/dist'),
-		filename: 'bundle.js'
+		path: path.resolve(__dirname, './build'),
+		publicPath: '',
+		filename: 'bundle.js',
 	},
+	plugins: [new webpack.HotModuleReplacementPlugin()]
 }

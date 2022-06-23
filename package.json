@@ -1,8 +1,8 @@
 {
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
     "start": "webpack serve --mode development --hot",
-    "build": "webpack --mode production",
     "help": "webpack --help",
     "validate": "webpack configtest"
   },
