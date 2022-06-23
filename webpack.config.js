@@ -20,6 +20,11 @@ module.exports = {
 	resolve: {
 		extensions: ['.jsx', '.ts', '.js'],
 	},
+	devServer: {
+		port: 3000,
+		open: true,
+		hot: true
+	},
 	output: {
 		path: path.join(__dirname, '/dist'),
 		filename: 'bundle.js'
