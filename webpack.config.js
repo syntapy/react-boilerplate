@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: './src/main.jsx',
@@ -21,7 +20,6 @@ module.exports = {
 		port: 3000,
 		hot: true,
 		open: true,
-		static: path.join(__dirname, './build')
 	},
 	output: {
 		path: path.resolve(__dirname, './build'),
