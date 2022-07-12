@@ -7,15 +7,17 @@
     "validate": "webpack configtest"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-react": "^7.17.12",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "babel-loader": "^8.2.5",
-    "html-webpack-plugin": "^5.5.0",
+    "css-modules-typescript-loader": "^4.0.1",
+    "package.json": "^2.0.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-refresh": "^0.13.0",
+    "react-scripts": "^5.0.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.0",
     "scss-loader": "^0.0.1",
@@ -24,7 +26,11 @@
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.2"
+    "webpack-dev-server": "^4.9.2",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5"
   },
   "babel":{
     "presets": [

@@ -7,11 +7,6 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
-				use: ['babel-loader'],
-				exclude: /node_modules/,
-			},
-			{
 				test: /\.tsx?$/,
 				use: 'ts-loader',
 				exclude: /node_modules/,
@@ -29,17 +24,15 @@ module.exports = {
 		]
 	},
 	resolve: {
-		extensions: ['.tsx', '.js'],
+		extensions: ['.tsx', '.ts', '.js'],
 	},
 	devServer: {
 		port: 3000,
-		hot: true,
 		open: true,
+		hot: true,
 	},
 	output: {
-		path: path.resolve(__dirname, './build'),
-		publicPath: '',
 		filename: 'bundle.js',
+		path: path.resolve(__dirname, './build'),
 	},
-	plugins: [new webpack.HotModuleReplacementPlugin()]
 }
