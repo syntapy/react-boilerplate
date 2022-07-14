@@ -45,8 +45,8 @@ export class Clock extends React.Component {
 	render() {
 		return (
 			<div className="clock">
-				<h1>Hello Nuclear Reactors</h1>
-				<p>The time is: {this.state.date.toISOString()}</p>
+				<h1 className="text-red-900">Hello Nuclear Reactors</h1>
+				<p className="text-green-900">The time is: {this.state.date.toISOString()}</p>
 			</div>
 		)
 	}
